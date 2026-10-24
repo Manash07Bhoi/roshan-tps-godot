@@ -87,7 +87,7 @@ func apply_graphics_settings(window: Window, environment: Environment, scene_roo
 
 	if Settings.config_file.get_value("rendering", "ssao_quality") == -1:
 		environment.ssao_enabled = false
-	if Settings.config_file.get_value("rendering", "ssao_quality") == RenderingServer.ENV_SSAO_QUALITY_MEDIUM:
+	elif Settings.config_file.get_value("rendering", "ssao_quality") == RenderingServer.ENV_SSAO_QUALITY_MEDIUM:
 		environment.ssao_enabled = true
 		RenderingServer.environment_set_ssao_quality(RenderingServer.ENV_SSAO_QUALITY_HIGH, false, 0.5, 2, 50, 300)
 	else:
