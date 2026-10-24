@@ -91,7 +91,8 @@ Full details, including what could **not** be tested: [`docs/TEST_REPORT.md`](do
 | Menu, settings, online panel, loading screen: graphical, Forward+ (software Vulkan) | PASS |
 | Gameplay: graphical, Compatibility renderer (software OpenGL, ≈1 FPS) | PASS for movement, camera, aim, shoot, back to menu, quit |
 | Gameplay: graphical, Forward+ on software Vulkan | BLOCKED: level load freezes at 38 % on this GPU-less test machine (engine/driver-level, also happens on unmodified upstream) |
-| Real GPU, gamepad, Android | NOT TESTED (no hardware available) |
+| Online host/connect, gamepad, audio output, real GPU, Android | NOT TESTED (no second machine, controller, sound device or GPU available) |
+| Clean clone of this repo → import → tests | PASS (see test report) |
 
 Run the tests yourself:
 
@@ -99,6 +100,13 @@ Run the tests yourself:
 godot --headless --import --path .
 godot --headless --path . res://tests/test_runner.tscn   # exit code 0 = all passed
 ```
+
+## Development story video
+
+[`media/ROSHAN_TPS_Development_Story.mp4`](media/ROSHAN_TPS_Development_Story.mp4): 29 s,
+vertical 1080×1920, cut **only from real recordings** made during this work (terminal
+session, menu capture, gameplay capture, GitHub screenshots). Sped-up parts are
+labelled on screen. Sources and editing steps: [`media/EDITING_NOTES.md`](media/EDITING_NOTES.md).
 
 ## Known limitations
 
