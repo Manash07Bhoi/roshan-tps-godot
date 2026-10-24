@@ -822,7 +822,7 @@ offset_bottom = -100.0
 
 [node name="Label" type="Label" parent="UI/Loading" unique_id=1961373571]
 layout_mode = 2
-text = "Loading..."
+text = "Loading ROSHAN TPS..."
 
 [node name="Progress" type="ProgressBar" parent="UI/Loading" unique_id=1379961033]
 layout_mode = 2
