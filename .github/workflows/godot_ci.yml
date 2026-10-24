@@ -1,0 +1,49 @@
+name: Godot headless import & tests
+on: [push, pull_request]
+
+env:
+  GODOT_VERSION: 4.7.2-stable
+
+jobs:
+  headless:
+    name: Import + automated tests (Godot 4.7.2-stable)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Godot and verify official SHA512 checksum
+        run: |
+          cd "${RUNNER_TEMP}"
+          base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}"
+          zip="Godot_v${GODOT_VERSION}_linux.x86_64.zip"
+          curl -sSLO "${base}/${zip}"
+          curl -sSLO "${base}/SHA512-SUMS.txt"
+          grep " ${zip}\$" SHA512-SUMS.txt | sha512sum -c -
+          unzip -q "${zip}"
+          mv "Godot_v${GODOT_VERSION}_linux.x86_64" godot
+          chmod +x godot
+          ./godot --version
+          echo "GODOT=${RUNNER_TEMP}/godot" >> "${GITHUB_ENV}"
+
+      - name: Headless import
+        run: |
+          "${GODOT}" --headless --import --path . 2>&1 | tee import.log
+          # Fail on GDScript parse errors; known asset-import warnings are documented
+          # in docs/TEST_REPORT.md and do not fail the build.
+          if grep -E "SCRIPT ERROR|Parse Error" import.log; then exit 1; fi
+
+      - name: Automated test suite
+        run: |
+          "${GODOT}" --headless --path . res://tests/test_runner.tscn 2>&1 | tee tests.log
+          grep -q "RESULT: .* 0 failed" tests.log
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-logs
+          path: |
+            import.log
+            tests.log
