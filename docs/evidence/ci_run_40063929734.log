@@ -1,0 +1,936 @@
+2026-10-24T04:50:39.2366044Z Current runner version: '2.338.0'
+2026-10-24T04:50:39.2392201Z ##[group]Runner Image Provisioner
+2026-10-24T04:50:39.2393282Z Hosted Compute Agent
+2026-10-24T04:50:39.2394016Z Version: 20261012.601
+2026-10-24T04:50:39.2394738Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-24T04:50:39.2395932Z Build Date: 2026-10-12T17:48:21Z
+2026-10-24T04:50:39.2396732Z Worker ID: {6c547e4b-f601-4cd6-b6b0-4b2e4edae7c8}
+2026-10-24T04:50:39.2397477Z Region: centralus
+2026-10-24T04:50:39.2398141Z Cloud: Azure
+2026-10-24T04:50:39.2398732Z ##[endgroup]
+2026-10-24T04:50:39.2400392Z ##[group]Operating System
+2026-10-24T04:50:39.2401165Z Ubuntu
+2026-10-24T04:50:39.2401698Z 24.04.5
+2026-10-24T04:50:39.2402303Z LTS
+2026-10-24T04:50:39.2403244Z ##[endgroup]
+2026-10-24T04:50:39.2403815Z ##[group]Runner Image
+2026-10-24T04:50:39.2404514Z Image: ubuntu-24.04
+2026-10-24T04:50:39.2405099Z Version: 20261012.334.1
+2026-10-24T04:50:39.2406448Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-24T04:50:39.2407991Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-24T04:50:39.2409038Z ##[endgroup]
+2026-10-24T04:50:39.2410231Z ##[group]GITHUB_TOKEN Permissions
+2026-10-24T04:50:39.2412824Z Contents: read
+2026-10-24T04:50:39.2413580Z Metadata: read
+2026-10-24T04:50:39.2414240Z Packages: read
+2026-10-24T04:50:39.2414850Z ##[endgroup]
+2026-10-24T04:50:39.2417332Z Secret source: Actions
+2026-10-24T04:50:39.2418455Z Cache mode: write
+2026-10-24T04:50:39.2419463Z Prepare workflow directory
+2026-10-24T04:50:39.2817778Z Prepare all required actions
+2026-10-24T04:50:39.2865880Z Getting action download info
+2026-10-24T04:50:39.5327930Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-24T04:50:39.6376968Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-24T04:50:39.8412474Z Complete job name: Import + automated tests (Godot 4.7.2-stable)
+2026-10-24T04:50:39.9343252Z ##[group]Run actions/checkout@v4
+2026-10-24T04:50:39.9344197Z with:
+2026-10-24T04:50:39.9344684Z   repository: Manash07Bhoi/roshan-tps-godot
+2026-10-24T04:50:39.9348323Z   token: ***
+2026-10-24T04:50:39.9348771Z   ssh-strict: true
+2026-10-24T04:50:39.9349235Z   ssh-user: git
+2026-10-24T04:50:39.9349705Z   persist-credentials: true
+2026-10-24T04:50:39.9350214Z   clean: true
+2026-10-24T04:50:39.9350679Z   sparse-checkout-cone-mode: true
+2026-10-24T04:50:39.9351219Z   fetch-depth: 1
+2026-10-24T04:50:39.9351662Z   fetch-tags: false
+2026-10-24T04:50:39.9352122Z   show-progress: true
+2026-10-24T04:50:39.9352775Z   lfs: false
+2026-10-24T04:50:39.9353211Z   submodules: false
+2026-10-24T04:50:39.9353687Z   set-safe-directory: true
+2026-10-24T04:50:39.9354214Z   allow-unsafe-pr-checkout: false
+2026-10-24T04:50:39.9355017Z env:
+2026-10-24T04:50:39.9355449Z   GODOT_VERSION: 4.7.2-stable
+2026-10-24T04:50:39.9355950Z ##[endgroup]
+2026-10-24T04:50:40.0430465Z Syncing repository: Manash07Bhoi/roshan-tps-godot
+2026-10-24T04:50:40.0433772Z ##[group]Getting Git version info
+2026-10-24T04:50:40.0435203Z Working directory is '/home/runner/work/roshan-tps-godot/roshan-tps-godot'
+2026-10-24T04:50:40.0437189Z [command]/usr/bin/git version
+2026-10-24T04:50:40.0513527Z git version 2.55.0
+2026-10-24T04:50:40.0546589Z ##[endgroup]
+2026-10-24T04:50:40.0556081Z Temporarily overriding HOME='/home/runner/work/_temp/d7194827-c841-4e75-9b54-b6a8cb810669' before making global git config changes
+2026-10-24T04:50:40.0559135Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-24T04:50:40.0561913Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/roshan-tps-godot/roshan-tps-godot
+2026-10-24T04:50:40.0627047Z Deleting the contents of '/home/runner/work/roshan-tps-godot/roshan-tps-godot'
+2026-10-24T04:50:40.0630836Z ##[group]Initializing the repository
+2026-10-24T04:50:40.0636366Z [command]/usr/bin/git init /home/runner/work/roshan-tps-godot/roshan-tps-godot
+2026-10-24T04:50:40.0734823Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-24T04:50:40.0736883Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-24T04:50:40.0738777Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-24T04:50:40.0739891Z hint: call:
+2026-10-24T04:50:40.0740433Z hint:
+2026-10-24T04:50:40.0741124Z hint: 	git config --global init.defaultBranch <name>
+2026-10-24T04:50:40.0742234Z hint:
+2026-10-24T04:50:40.0743502Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-24T04:50:40.0744727Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-24T04:50:40.0745493Z hint:
+2026-10-24T04:50:40.0745935Z hint: 	git branch -m <name>
+2026-10-24T04:50:40.0746435Z hint:
+2026-10-24T04:50:40.0747085Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-24T04:50:40.0748531Z Initialized empty Git repository in /home/runner/work/roshan-tps-godot/roshan-tps-godot/.git/
+2026-10-24T04:50:40.0751476Z [command]/usr/bin/git remote add origin https://github.com/Manash07Bhoi/roshan-tps-godot
+2026-10-24T04:50:40.0797318Z ##[endgroup]
+2026-10-24T04:50:40.0798144Z ##[group]Disabling automatic garbage collection
+2026-10-24T04:50:40.0801895Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-24T04:50:40.0836193Z ##[endgroup]
+2026-10-24T04:50:40.0837558Z ##[group]Setting up auth
+2026-10-24T04:50:40.0844562Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-24T04:50:40.0878780Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-24T04:50:40.1246118Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-24T04:50:40.1289496Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-24T04:50:40.1525709Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-24T04:50:40.1564453Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-24T04:50:40.1786851Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-24T04:50:40.1828586Z ##[endgroup]
+2026-10-24T04:50:40.1830016Z ##[group]Fetching the repository
+2026-10-24T04:50:40.1839939Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6d801485b717e5df0ccd3a2431da809a38e63e75:refs/remotes/origin/main
+2026-10-24T04:50:46.5258919Z From https://github.com/Manash07Bhoi/roshan-tps-godot
+2026-10-24T04:50:46.5260981Z  * [new ref]         6d801485b717e5df0ccd3a2431da809a38e63e75 -> origin/main
+2026-10-24T04:50:46.5266244Z ##[endgroup]
+2026-10-24T04:50:46.5268102Z ##[group]Determining the checkout info
+2026-10-24T04:50:46.5270344Z ##[endgroup]
+2026-10-24T04:50:46.5276873Z [command]/usr/bin/git sparse-checkout disable
+2026-10-24T04:50:46.5338906Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-24T04:50:46.5376723Z ##[group]Checking out the ref
+2026-10-24T04:50:46.5384503Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-24T04:50:47.6000832Z Updating files:  66% (390/588)
+2026-10-24T04:50:47.6077140Z Updating files:  67% (394/588)
+2026-10-24T04:50:47.6081045Z Updating files:  68% (400/588)
+2026-10-24T04:50:47.6105461Z Updating files:  69% (406/588)
+2026-10-24T04:50:47.6118655Z Updating files:  70% (412/588)
+2026-10-24T04:50:47.6137219Z Updating files:  71% (418/588)
+2026-10-24T04:50:47.6178040Z Updating files:  72% (424/588)
+2026-10-24T04:50:47.6227493Z Updating files:  73% (430/588)
+2026-10-24T04:50:47.6277347Z Updating files:  74% (436/588)
+2026-10-24T04:50:47.6306646Z Updating files:  75% (441/588)
+2026-10-24T04:50:47.6344238Z Updating files:  76% (447/588)
+2026-10-24T04:50:47.6379712Z Updating files:  77% (453/588)
+2026-10-24T04:50:47.6421759Z Updating files:  78% (459/588)
+2026-10-24T04:50:47.6804981Z Updating files:  79% (465/588)
+2026-10-24T04:50:47.7092402Z Updating files:  80% (471/588)
+2026-10-24T04:50:47.7112093Z Updating files:  81% (477/588)
+2026-10-24T04:50:47.7200946Z Updating files:  82% (483/588)
+2026-10-24T04:50:47.7358331Z Updating files:  83% (489/588)
+2026-10-24T04:50:47.7361803Z Updating files:  84% (494/588)
+2026-10-24T04:50:47.7616205Z Updating files:  85% (500/588)
+2026-10-24T04:50:47.7663659Z Updating files:  86% (506/588)
+2026-10-24T04:50:47.7687011Z Updating files:  87% (512/588)
+2026-10-24T04:50:47.7711677Z Updating files:  88% (518/588)
+2026-10-24T04:50:47.7780410Z Updating files:  89% (524/588)
+2026-10-24T04:50:47.7787377Z Updating files:  90% (530/588)
+2026-10-24T04:50:47.7798201Z Updating files:  91% (536/588)
+2026-10-24T04:50:47.7801224Z Updating files:  92% (541/588)
+2026-10-24T04:50:47.7816155Z Updating files:  93% (547/588)
+2026-10-24T04:50:47.7821328Z Updating files:  94% (553/588)
+2026-10-24T04:50:47.8034687Z Updating files:  95% (559/588)
+2026-10-24T04:50:47.8667498Z Updating files:  96% (565/588)
+2026-10-24T04:50:47.8717579Z Updating files:  97% (571/588)
+2026-10-24T04:50:47.8788280Z Updating files:  98% (577/588)
+2026-10-24T04:50:47.8855608Z Updating files:  99% (583/588)
+2026-10-24T04:50:47.8856287Z Updating files: 100% (588/588)
+2026-10-24T04:50:47.8856858Z Updating files: 100% (588/588), done.
+2026-10-24T04:50:47.8878338Z Switched to a new branch 'main'
+2026-10-24T04:50:47.8884560Z branch 'main' set up to track 'origin/main'.
+2026-10-24T04:50:47.8945989Z ##[endgroup]
+2026-10-24T04:50:47.8994177Z [command]/usr/bin/git log -1 --format=%H
+2026-10-24T04:50:47.9024397Z 6d801485b717e5df0ccd3a2431da809a38e63e75
+2026-10-24T04:50:47.9231611Z ##[group]Run cd "${RUNNER_TEMP}"
+2026-10-24T04:50:47.9232003Z cd "${RUNNER_TEMP}"
+2026-10-24T04:50:47.9232921Z base="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}"
+2026-10-24T04:50:47.9233472Z zip="Godot_v${GODOT_VERSION}_linux.x86_64.zip"
+2026-10-24T04:50:47.9233840Z curl -sSLO "${base}/${zip}"
+2026-10-24T04:50:47.9234143Z curl -sSLO "${base}/SHA512-SUMS.txt"
+2026-10-24T04:50:47.9234491Z grep " ${zip}\$" SHA512-SUMS.txt | sha512sum -c -
+2026-10-24T04:50:47.9234820Z unzip -q "${zip}"
+2026-10-24T04:50:47.9235116Z mv "Godot_v${GODOT_VERSION}_linux.x86_64" godot
+2026-10-24T04:50:47.9235431Z chmod +x godot
+2026-10-24T04:50:47.9235658Z ./godot --version
+2026-10-24T04:50:47.9235949Z echo "GODOT=${RUNNER_TEMP}/godot" >> "${GITHUB_ENV}"
+2026-10-24T04:50:47.9516834Z shell: /usr/bin/bash -e {0}
+2026-10-24T04:50:47.9517157Z env:
+2026-10-24T04:50:47.9517428Z   GODOT_VERSION: 4.7.2-stable
+2026-10-24T04:50:47.9517717Z ##[endgroup]
+2026-10-24T04:50:48.9911144Z Godot_v4.7.2-stable_linux.x86_64.zip: OK
+2026-10-24T04:50:50.1428156Z 4.7.2.stable.official.ed1daf0bf
+2026-10-24T04:50:50.1504040Z ##[group]Run "${GODOT}" --headless --import --path . 2>&1 | tee import.log
+2026-10-24T04:50:50.1568631Z "${GODOT}" --headless --import --path . 2>&1 | tee import.log
+2026-10-24T04:50:50.1569586Z # Fail on GDScript parse errors; known asset-import warnings are documented
+2026-10-24T04:50:50.1570518Z # in docs/TEST_REPORT.md and do not fail the build.
+2026-10-24T04:50:50.1571264Z if grep -E "SCRIPT ERROR|Parse Error" import.log; then exit 1; fi
+2026-10-24T04:50:50.1643246Z shell: /usr/bin/bash -e {0}
+2026-10-24T04:50:50.1643507Z env:
+2026-10-24T04:50:50.1643714Z   GODOT_VERSION: 4.7.2-stable
+2026-10-24T04:50:50.1643987Z   GODOT: /home/runner/work/_temp/godot
+2026-10-24T04:50:50.1644248Z ##[endgroup]
+2026-10-24T04:50:50.1907751Z Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+2026-10-24T04:50:50.2340341Z
+2026-10-24T04:50:50.3267335Z WARNING: HDR output requested, but it is not supported by this display server.
+2026-10-24T04:50:50.3268589Z      at: window_request_hdr_output (servers/display/display_server.cpp:1307)
+2026-10-24T04:50:54.0137609Z WARNING: HDR output requested, but it is not supported by this display server.
+2026-10-24T04:50:54.0138766Z      at: window_request_hdr_output (servers/display/display_server.cpp:1307)
+2026-10-24T04:50:55.2952894Z WARNING: HDR output requested, but it is not supported by this display server.
+2026-10-24T04:50:55.2954261Z      at: window_request_hdr_output (servers/display/display_server.cpp:1307)
+2026-10-24T04:50:55.3394404Z [   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+2026-10-24T04:50:55.3396253Z [  16% ] first_scan_filesystem | Loading global class names...
+2026-10-24T04:50:55.3423411Z [  33% ] first_scan_filesystem | Verifying GDExtensions...
+2026-10-24T04:50:55.3424566Z [  50% ] first_scan_filesystem | Creating autoload scripts...
+2026-10-24T04:50:55.3478792Z [  66% ] first_scan_filesystem | Initializing plugins...
+2026-10-24T04:50:55.3479951Z [  83% ] first_scan_filesystem | Starting file scan...
+2026-10-24T04:50:55.3493734Z [ DONE ] first_scan_filesystem
+2026-10-24T04:50:55.3523736Z
+2026-10-24T04:50:55.4344185Z [   0% ] update_scripts_classes | Started Registering global classes... (16 steps)
+2026-10-24T04:50:55.4345237Z [   0% ] update_scripts_classes |
+2026-10-24T04:50:55.4345939Z [   5% ] update_scripts_classes |
+2026-10-24T04:50:55.4346609Z [  11% ] update_scripts_classes |
+2026-10-24T04:50:55.4347261Z [  17% ] update_scripts_classes |
+2026-10-24T04:50:55.4347917Z [  23% ] update_scripts_classes |
+2026-10-24T04:50:55.4348577Z [  29% ] update_scripts_classes |
+2026-10-24T04:50:55.4349214Z [  35% ] update_scripts_classes |
+2026-10-24T04:50:55.4349875Z [  41% ] update_scripts_classes |
+2026-10-24T04:50:55.4350537Z [  47% ] update_scripts_classes |
+2026-10-24T04:50:55.4351204Z [  52% ] update_scripts_classes |
+2026-10-24T04:50:55.4351871Z [  58% ] update_scripts_classes |
+2026-10-24T04:50:55.4352801Z [  64% ] update_scripts_classes |
+2026-10-24T04:50:55.4353494Z [  70% ] update_scripts_classes |
+2026-10-24T04:50:55.4354214Z [  76% ] update_scripts_classes | Player
+2026-10-24T04:50:55.4355119Z [  82% ] update_scripts_classes | PlayerInputSynchronizer
+2026-10-24T04:50:55.4355962Z [  88% ] update_scripts_classes |
+2026-10-24T04:50:55.4356658Z [ DONE ] update_scripts_classes
+2026-10-24T04:50:55.4357202Z
+2026-10-24T04:50:55.4358207Z [   0% ] _update_scan_actions | Started Scanning actions... (170 steps)
+2026-10-24T04:50:55.4359181Z [   0% ] _update_scan_actions | door.dae
+2026-10-24T04:50:55.4359979Z [   0% ] _update_scan_actions | door_albedo.png
+2026-10-24T04:50:55.4360835Z [   1% ] _update_scan_actions | door_emission.png
+2026-10-24T04:50:55.4361673Z [   1% ] _update_scan_actions | door_normal.png
+2026-10-24T04:50:55.4362481Z [   2% ] _update_scan_actions | door_orm.png
+2026-10-24T04:50:55.4363532Z [   2% ] _update_scan_actions | open_close.wav
+2026-10-24T04:50:55.4365723Z [   3% ] _update_scan_actions | BlastMesh.glb
+2026-10-24T04:50:55.4367560Z [   4% ] _update_scan_actions | BlastTexture.png
+2026-10-24T04:50:55.4369748Z [   4% ] _update_scan_actions | spotlight_projector.png
+2026-10-24T04:50:55.4371686Z [   5% ] _update_scan_actions | charge.wav
+2026-10-24T04:50:55.4374114Z [   5% ] _update_scan_actions | explosion.wav
+2026-10-24T04:50:55.4376154Z [   6% ] _update_scan_actions | hit.wav
+2026-10-24T04:50:55.4377434Z [   7% ] _update_scan_actions | shoot.wav
+2026-10-24T04:50:55.4379481Z [   7% ] _update_scan_actions | walk.wav
+2026-10-24T04:50:55.4381543Z [   8% ] _update_scan_actions | LightRays.png
+2026-10-24T04:50:55.4383929Z [   8% ] _update_scan_actions | LightRaysMesh.glb
+2026-10-24T04:50:55.4385941Z [   9% ] _update_scan_actions | SmokePuff.png
+2026-10-24T04:50:55.4388059Z [   9% ] _update_scan_actions | SmokePuffNormals.png
+2026-10-24T04:50:55.4389935Z [  10% ] _update_scan_actions | BarrelSmoke.glb
+2026-10-24T04:50:55.4391991Z [  11% ] _update_scan_actions | BarrelSmokeTexture.png
+2026-10-24T04:50:55.4394268Z [  11% ] _update_scan_actions | FireTrailParticle.png
+2026-10-24T04:50:55.4396134Z [  12% ] _update_scan_actions | red_robot.glb
+2026-10-24T04:50:55.4398118Z [  12% ] _update_scan_actions | SparkParticle.glb
+2026-10-24T04:50:55.4400200Z [  13% ] _update_scan_actions | SparkTexture.png
+2026-10-24T04:50:55.4402064Z [  14% ] _update_scan_actions | part_head.glb
+2026-10-24T04:50:55.4404238Z [  14% ] _update_scan_actions | part_shield.glb
+2026-10-24T04:50:55.4406177Z [  15% ] _update_scan_actions | ray.glb
+2026-10-24T04:50:55.4408535Z [  15% ] _update_scan_actions | explosion.png
+2026-10-24T04:50:55.4410747Z [  16% ] _update_scan_actions | particle.png
+2026-10-24T04:50:55.4413287Z [  16% ] _update_scan_actions | ray_smoke_texture.png
+2026-10-24T04:50:55.4415882Z [  17% ] _update_scan_actions | ray_texture.png
+2026-10-24T04:50:55.4417483Z [  18% ] _update_scan_actions | red_robot_albedo.png
+2026-10-24T04:50:55.4419144Z [  18% ] _update_scan_actions | red_robot_emission.png
+2026-10-24T04:50:55.4420829Z [  19% ] _update_scan_actions | red_robot_normal.png
+2026-10-24T04:50:55.4424397Z [  19% ] _update_scan_actions | red_robot_orm.png
+2026-10-24T04:50:55.4425217Z [  20% ] _update_scan_actions | dot.png
+2026-10-24T04:50:55.4426303Z [  21% ] _update_scan_actions | flying_forklift.glb
+2026-10-24T04:50:55.4427996Z [  21% ] _update_scan_actions | flying_forklift_albedo.png
+2026-10-24T04:50:55.4429593Z [  22% ] _update_scan_actions | flying_forklift_emission.png
+2026-10-24T04:50:55.4431138Z [  22% ] _update_scan_actions | flying_forklift_normal.png
+2026-10-24T04:50:55.4433093Z [  23% ] _update_scan_actions | flying_forklift_orm.png
+2026-10-24T04:50:55.4434631Z [  23% ] _update_scan_actions | core.glb
+2026-10-24T04:50:55.4436048Z [  24% ] _update_scan_actions | lights.glb
+2026-10-24T04:50:55.4437758Z [  25% ] _update_scan_actions | props.glb
+2026-10-24T04:50:55.4439459Z [  25% ] _update_scan_actions | structure.glb
+2026-10-24T04:50:55.4441179Z [  26% ] _update_scan_actions | scificar_albedo.png
+2026-10-24T04:50:55.4443330Z [  26% ] _update_scan_actions | scificar_emissive.png
+2026-10-24T04:50:55.4444929Z [  27% ] _update_scan_actions | scificar_normal.png
+2026-10-24T04:50:55.4453488Z [  28% ] _update_scan_actions | scificar_orm.png
+2026-10-24T04:50:55.4454555Z [  28% ] _update_scan_actions | container1_albedo.png
+2026-10-24T04:50:55.4455082Z [  29% ] _update_scan_actions | container1_normal.png
+2026-10-24T04:50:55.4455845Z [  29% ] _update_scan_actions | container1_orm.png
+2026-10-24T04:50:55.4456915Z [  30% ] _update_scan_actions | container2_albedo.png
+2026-10-24T04:50:55.4458614Z [  30% ] _update_scan_actions | container2_normal.png
+2026-10-24T04:50:55.4459733Z [  31% ] _update_scan_actions | container2_orm.png
+2026-10-24T04:50:55.4461970Z [  32% ] _update_scan_actions | container3_albedo.png
+2026-10-24T04:50:55.4463995Z [  32% ] _update_scan_actions | container3_normal.png
+2026-10-24T04:50:55.4466144Z [  33% ] _update_scan_actions | container3_orm.png
+2026-10-24T04:50:55.4468200Z [  33% ] _update_scan_actions | container4_albedo.png
+2026-10-24T04:50:55.4470346Z [  34% ] _update_scan_actions | container4_normal.png
+2026-10-24T04:50:55.4472303Z [  35% ] _update_scan_actions | container4_orm.png
+2026-10-24T04:50:55.4474532Z [  35% ] _update_scan_actions | door_albedo.png
+2026-10-24T04:50:55.4476575Z [  36% ] _update_scan_actions | door_emission.png
+2026-10-24T04:50:55.4478569Z [  36% ] _update_scan_actions | door_normal.png
+2026-10-24T04:50:55.4480567Z [  37% ] _update_scan_actions | door_orm.png
+2026-10-24T04:50:55.4482597Z [  38% ] _update_scan_actions | door_reactor_albedo.png
+2026-10-24T04:50:55.4484879Z [  38% ] _update_scan_actions | door_reactor_emission.png
+2026-10-24T04:50:55.4486874Z [  39% ] _update_scan_actions | door_reactor_normal.png
+2026-10-24T04:50:55.4488871Z [  39% ] _update_scan_actions | door_reactor_orm.png
+2026-10-24T04:50:55.4490874Z [  40% ] _update_scan_actions | mid_cargo_box_albedo.png
+2026-10-24T04:50:55.4492937Z [  40% ] _update_scan_actions | mid_cargo_box_normal.png
+2026-10-24T04:50:55.4495188Z [  41% ] _update_scan_actions | mid_cargo_box_orm.png
+2026-10-24T04:50:55.4497357Z [  42% ] _update_scan_actions | reactor_cylinder_albedo.png
+2026-10-24T04:50:55.4499325Z [  42% ] _update_scan_actions | reactor_cylinder_emissive.png
+2026-10-24T04:50:55.4501322Z [  43% ] _update_scan_actions | reactor_cylinder_normal.png
+2026-10-24T04:50:55.4503481Z [  43% ] _update_scan_actions | reactor_cylinder_orm.png
+2026-10-24T04:50:55.4505485Z [  44% ] _update_scan_actions | CoreOutLight.glb
+2026-10-24T04:50:55.4507553Z [  45% ] _update_scan_actions | core_fire_noise.png
+2026-10-24T04:50:55.4509609Z [  45% ] _update_scan_actions | core_inner_noise2.png
+2026-10-24T04:50:55.4511831Z [  46% ] _update_scan_actions | core_inner_noise.png
+2026-10-24T04:50:55.4514172Z [  46% ] _update_scan_actions | core_laval_spotches.png
+2026-10-24T04:50:55.4516248Z [  47% ] _update_scan_actions | core_out_light.png
+2026-10-24T04:50:55.4518268Z [  47% ] _update_scan_actions | column_albedo.png
+2026-10-24T04:50:55.4520249Z [  48% ] _update_scan_actions | column_normal.png
+2026-10-24T04:50:55.4522241Z [  49% ] _update_scan_actions | column_orm.png
+2026-10-24T04:50:55.4524715Z [  49% ] _update_scan_actions | floor_grate_wholes_albedo.png
+2026-10-24T04:50:55.4526910Z [  50% ] _update_scan_actions | floor_grate_wholes_normal.png
+2026-10-24T04:50:55.4529064Z [  50% ] _update_scan_actions | floor_grate_wholes_orm.png
+2026-10-24T04:50:55.4531176Z [  51% ] _update_scan_actions | light_shafts.png
+2026-10-24T04:50:55.4533436Z [  52% ] _update_scan_actions | reactor_emitter_albedo.png
+2026-10-24T04:50:55.4535673Z [  52% ] _update_scan_actions | reactor_emitter_normal.png
+2026-10-24T04:50:55.4537862Z [  53% ] _update_scan_actions | reactor_emitter_orm.png
+2026-10-24T04:50:55.4540020Z [  53% ] _update_scan_actions | set_asphalt_albedo.png
+2026-10-24T04:50:55.4542202Z [  54% ] _update_scan_actions | set_asphalt_normal.png
+2026-10-24T04:50:55.4544592Z [  54% ] _update_scan_actions | set_asphalt_orm.png
+2026-10-24T04:50:55.4546788Z [  55% ] _update_scan_actions | tile_anti_slip_albedo.png
+2026-10-24T04:50:55.4548996Z [  56% ] _update_scan_actions | tile_anti_slip_metal_normal.png
+2026-10-24T04:50:55.4551163Z [  56% ] _update_scan_actions | tile_anti_slip_metal_orm.png
+2026-10-24T04:50:55.4553405Z [  57% ] _update_scan_actions | tile_carbon_fiber_albedo.png
+2026-10-24T04:50:55.4555679Z [  57% ] _update_scan_actions | tile_carbon_fiber_normal.png
+2026-10-24T04:50:55.4557833Z [  58% ] _update_scan_actions | tile_carbon_fiber_orm.png
+2026-10-24T04:50:55.4559991Z [  59% ] _update_scan_actions | tile_default_metal_albedo.png
+2026-10-24T04:50:55.4562173Z [  59% ] _update_scan_actions | tile_default_metal_normal.png
+2026-10-24T04:50:55.4564547Z [  60% ] _update_scan_actions | tile_default_metal_orm.png
+2026-10-24T04:50:55.4566698Z [  60% ] _update_scan_actions | tile_glass_albedo.png
+2026-10-24T04:50:55.4568866Z [  61% ] _update_scan_actions | tile_glass_emission.png
+2026-10-24T04:50:55.4571117Z [  61% ] _update_scan_actions | tile_glass_normal.png
+2026-10-24T04:50:55.4573387Z [  62% ] _update_scan_actions | tile_glass_orm.png
+2026-10-24T04:50:55.4575734Z [  63% ] _update_scan_actions | tile_metal_pillars_albedo.png
+2026-10-24T04:50:55.4577943Z [  63% ] _update_scan_actions | tile_metal_pillars_normal.png
+2026-10-24T04:50:55.4580106Z [  64% ] _update_scan_actions | tile_metal_pillars_orm.png
+2026-10-24T04:50:55.4582354Z [  64% ] _update_scan_actions | tile_painted_gun_metal_albedo.png
+2026-10-24T04:50:55.4584804Z [  65% ] _update_scan_actions | tile_painted_gun_metal_normal.png
+2026-10-24T04:50:55.4586973Z [  66% ] _update_scan_actions | tile_painted_gun_metal_orm.png
+2026-10-24T04:50:55.4589110Z [  66% ] _update_scan_actions | tile_rivet_panels_albedo.png
+2026-10-24T04:50:55.4591318Z [  67% ] _update_scan_actions | tile_rivet_panels_normal.png
+2026-10-24T04:50:55.4593809Z [  67% ] _update_scan_actions | tile_rivet_panels_orm.png
+2026-10-24T04:50:55.4596081Z [  68% ] _update_scan_actions | tile_scifi_floor_panel_albedo.png
+2026-10-24T04:50:55.4598247Z [  69% ] _update_scan_actions | tile_scifi_floor_panel_normal.png
+2026-10-24T04:50:55.4600413Z [  69% ] _update_scan_actions | tile_scifi_floor_panel_orm.png
+2026-10-24T04:50:55.4602603Z [  70% ] _update_scan_actions | tile_simple_floor_albedo.png
+2026-10-24T04:50:55.4604970Z [  70% ] _update_scan_actions | tile_simple_floor_normal.png
+2026-10-24T04:50:55.4607150Z [  71% ] _update_scan_actions | tile_simple_floor_orm.png
+2026-10-24T04:50:55.4609306Z [  71% ] _update_scan_actions | tile_steel_albedo.png
+2026-10-24T04:50:55.4611509Z [  72% ] _update_scan_actions | tile_steel_normal.png
+2026-10-24T04:50:55.4613851Z [  73% ] _update_scan_actions | tile_steel_orm.png
+2026-10-24T04:50:55.4616078Z [  73% ] _update_scan_actions | tile_tech_panels_albedo.png
+2026-10-24T04:50:55.4618238Z [  74% ] _update_scan_actions | tile_tech_panels_color_albedo.png
+2026-10-24T04:50:55.4620397Z [  74% ] _update_scan_actions | tile_tech_panels_color_normal.png
+2026-10-24T04:50:55.4622572Z [  75% ] _update_scan_actions | tile_tech_panels_color_orm.png
+2026-10-24T04:50:55.4624911Z [  76% ] _update_scan_actions | tile_tech_panels_normal.png
+2026-10-24T04:50:55.4627079Z [  76% ] _update_scan_actions | tile_tech_panels_orm.png
+2026-10-24T04:50:55.4629262Z [  77% ] _update_scan_actions | train_texture_albedo.png
+2026-10-24T04:50:55.4631475Z [  77% ] _update_scan_actions | train_texture_normal.png
+2026-10-24T04:50:55.4633893Z [  78% ] _update_scan_actions | train_texture_orm.png
+2026-10-24T04:50:55.4636087Z [  78% ] _update_scan_actions | trim_emission_lights_albedo.png
+2026-10-24T04:50:55.4638280Z [  79% ] _update_scan_actions | trim_emission_lights_emission.png
+2026-10-24T04:50:55.4640397Z [  80% ] _update_scan_actions | trim_emission_lights_normal.png
+2026-10-24T04:50:55.4642495Z [  80% ] _update_scan_actions | trim_emission_lights_orm.png
+2026-10-24T04:50:55.4644866Z [  81% ] _update_scan_actions | trim_misc_1_albedo.png
+2026-10-24T04:50:55.4647048Z [  81% ] _update_scan_actions | trim_misc_1_normal.png
+2026-10-24T04:50:55.4649171Z [  82% ] _update_scan_actions | trim_misc_1_orm.png
+2026-10-24T04:50:55.4651302Z [  83% ] _update_scan_actions | trim_misc_2_albedo.png
+2026-10-24T04:50:55.4653455Z [  83% ] _update_scan_actions | trim_misc_2_normal.png
+2026-10-24T04:50:55.4655727Z [  84% ] _update_scan_actions | trim_misc_2_orm.png
+2026-10-24T04:50:55.4657799Z [  84% ] _update_scan_actions | plasma.png
+2026-10-24T04:50:55.4659712Z [  85% ] _update_scan_actions | level.exr
+2026-10-24T04:50:55.4661867Z [  85% ] _update_scan_actions | level.GPUParticlesCollisionSDF3D_data.exr
+2026-10-24T04:50:55.4663861Z [  86% ] _update_scan_actions | level_music.ogg
+2026-10-24T04:50:55.4665878Z [  87% ] _update_scan_actions | PT_Sans-Web-Bold.ttf
+2026-10-24T04:50:55.4667880Z [  87% ] _update_scan_actions | experiment.hdr
+2026-10-24T04:50:55.4669858Z [  88% ] _update_scan_actions | floor.png
+2026-10-24T04:50:55.4671843Z [  88% ] _update_scan_actions | menu_intro_music.ogg
+2026-10-24T04:50:55.4673988Z [  89% ] _update_scan_actions | tps_demo.png
+2026-10-24T04:50:55.4676143Z [  90% ] _update_scan_actions | jump.wav
+2026-10-24T04:50:55.4677932Z [  90% ] _update_scan_actions | land.wav
+2026-10-24T04:50:55.4679809Z [  91% ] _update_scan_actions | shoot.wav
+2026-10-24T04:50:55.4681702Z [  91% ] _update_scan_actions | step.wav
+2026-10-24T04:50:55.4684106Z [  92% ] _update_scan_actions | BlastSpark.png
+2026-10-24T04:50:55.4686333Z [  92% ] _update_scan_actions | FlarePolar.png
+2026-10-24T04:50:55.4688439Z [  93% ] _update_scan_actions | FlareStraight.png
+2026-10-24T04:50:55.4690500Z [  94% ] _update_scan_actions | blue_myst.png
+2026-10-24T04:50:55.4692450Z [  94% ] _update_scan_actions | bullet_explode.wav
+2026-10-24T04:50:55.4694737Z [  95% ] _update_scan_actions | player.glb
+2026-10-24T04:50:55.4696894Z [  95% ] _update_scan_actions | player_robot_albedo.png
+2026-10-24T04:50:55.4699011Z [  96% ] _update_scan_actions | player_robot_emissive.png
+2026-10-24T04:50:55.4701133Z [  97% ] _update_scan_actions | player_robot_normal.png
+2026-10-24T04:50:55.4703162Z [  97% ] _update_scan_actions | player_robot_orm.png
+2026-10-24T04:50:55.4705234Z [  98% ] _update_scan_actions | crosshair.png
+2026-10-24T04:50:55.4707125Z [  98% ] _update_scan_actions | icon.png
+2026-10-24T04:50:55.4707788Z [ DONE ] _update_scan_actions
+2026-10-24T04:50:55.4708152Z
+2026-10-24T04:50:55.4708512Z [   0% ] reimport | Started (Re)Importing Assets (170 steps)
+2026-10-24T04:50:55.4709021Z [   0% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4710064Z [   0% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4713493Z [   1% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4714404Z [   1% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4715200Z [   2% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4721668Z [   2% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4722293Z [   3% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4723030Z [   4% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4723677Z [   4% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4724277Z [   5% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4724739Z [   5% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4725482Z [   6% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4727351Z [   7% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4729174Z [   7% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4730375Z [   8% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4732317Z [   8% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4734325Z [   9% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4736226Z [   9% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4738089Z [  10% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4739822Z [  11% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4741554Z [  11% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4743253Z [  12% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4745365Z [  12% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4747096Z [  13% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4748882Z [  14% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4750741Z [  14% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4752627Z [  15% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4754252Z [  15% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4755630Z [  16% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4757582Z [  16% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4759455Z [  17% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4761242Z [  18% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4763135Z [  18% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4765125Z [  19% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4766984Z [  19% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4768787Z [  20% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4770627Z [  21% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4772512Z [  21% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4773962Z [  22% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4775888Z [  22% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4777577Z [  23% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4779306Z [  23% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4781195Z [  24% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4782294Z [  25% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4784462Z [  25% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4786196Z [  26% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4787983Z [  26% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4789822Z [  27% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4791602Z [  28% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4793624Z [  28% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4795338Z [  29% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4797072Z [  29% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4798602Z [  30% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4800118Z [  30% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4801437Z [  31% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4803415Z [  32% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4805356Z [  32% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4807157Z [  33% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4808962Z [  33% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4810735Z [  34% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4812586Z [  35% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4814578Z [  35% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4816629Z [  36% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4818273Z [  36% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4820139Z [  37% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4821909Z [  38% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4823977Z [  38% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4825798Z [  39% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4827642Z [  39% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4829455Z [  40% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4831270Z [  40% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4833522Z [  41% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4834990Z [  42% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4854088Z [  42% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4855183Z [  43% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4856268Z [  43% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4857293Z [  44% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4858304Z [  45% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4859307Z [  45% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4860292Z [  46% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4861300Z [  46% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4862309Z [  47% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4863600Z [  47% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4864597Z [  48% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4865557Z [  49% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4867171Z [  49% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4868088Z [  50% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4868959Z [  50% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4869928Z [  51% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4870814Z [  52% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4871696Z [  52% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4872853Z [  53% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4873767Z [  53% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4874633Z [  54% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4875510Z [  54% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4876367Z [  55% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4877258Z [  56% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4878128Z [  56% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4879007Z [  57% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4879875Z [  57% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4880806Z [  58% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4882768Z [  59% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4884771Z [  59% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4886374Z [  60% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4888048Z [  60% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4889712Z [  61% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4891430Z [  61% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4893296Z [  62% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4895143Z [  63% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4896849Z [  63% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4899287Z [  64% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4900716Z [  64% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4902737Z [  65% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4904476Z [  66% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4906217Z [  66% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4907925Z [  67% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4909498Z [  67% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4911158Z [  68% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4913091Z [  69% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4914774Z [  69% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4916505Z [  70% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4918145Z [  70% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4919813Z [  71% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4921455Z [  71% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4923255Z [  72% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4925593Z [  73% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4927028Z [  73% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4928720Z [  74% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4930385Z [  74% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4932074Z [  75% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4934037Z [  76% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4935728Z [  76% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4937379Z [  77% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4939088Z [  77% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4940749Z [  78% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4942477Z [  78% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4944369Z [  79% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4946009Z [  80% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4947609Z [  80% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4949266Z [  81% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4950942Z [  81% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4953386Z [  82% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4954840Z [  83% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4956558Z [  83% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4958278Z [  84% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4959972Z [  84% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4961604Z [  85% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4963258Z [  85% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4964916Z [  86% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4966387Z [  87% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4967872Z [  87% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4969611Z [  88% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4971149Z [  88% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4972847Z [  89% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4974347Z [  90% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4975855Z [  90% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4977275Z [  91% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4978703Z [  91% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4980170Z [  92% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4981857Z [  92% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4983823Z [  93% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4985412Z [  94% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4987049Z [  94% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4988512Z [  95% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4990066Z [  95% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4991649Z [  96% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4993291Z [  97% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4995157Z [  97% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4996733Z [  98% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.4998261Z [  98% ] reimport | Preparing files to reimport...
+2026-10-24T04:50:55.5000079Z [   0% ] reimport | Executing pre-reimport operations...
+2026-10-24T04:50:55.5017820Z [   0% ] preload_reimporting_scene | Started Preparing scenes for reload (1 steps)
+2026-10-24T04:50:55.5019026Z [   0% ] preload_reimporting_scene | Analyzing scene [empty]
+2026-10-24T04:50:55.5019995Z [  50% ] preload_reimporting_scene | Preparation done.
+2026-10-24T04:50:55.5020815Z [ DONE ] preload_reimporting_scene
+2026-10-24T04:50:55.5021340Z
+2026-10-24T04:50:55.5021778Z [   0% ] reimport | level.exr
+2026-10-24T04:50:56.4743465Z [   0% ] reimport | level.GPUParticlesCollisionSDF3D_data.exr
+2026-10-24T04:50:56.5723844Z [   1% ] reimport | PT_Sans-Web-Bold.ttf
+2026-10-24T04:50:56.5790941Z [   1% ] reimport | level_music.ogg
+2026-10-24T04:50:56.5916958Z [   2% ] reimport | menu_intro_music.ogg
+2026-10-24T04:50:56.6069383Z [   2% ] reimport | tile_default_metal_albedo.png
+2026-10-24T04:50:56.6211002Z [   3% ] reimport | tile_default_metal_normal.png
+2026-10-24T04:50:56.6457658Z [   4% ] reimport | tile_default_metal_orm.png
+2026-10-24T04:50:56.6711270Z [   4% ] reimport | tile_glass_albedo.png
+2026-10-24T04:50:56.6833491Z [   5% ] reimport | tile_glass_emission.png
+2026-10-24T04:50:56.6968607Z [   5% ] reimport | tile_glass_normal.png
+2026-10-24T04:50:56.7173809Z [   6% ] reimport | tile_glass_orm.png
+2026-10-24T04:50:56.7343293Z [   7% ] reimport | tile_metal_pillars_albedo.png
+2026-10-24T04:50:56.8666456Z [   7% ] reimport | tile_metal_pillars_normal.png
+2026-10-24T04:50:57.1582867Z [   8% ] reimport | tile_metal_pillars_orm.png
+2026-10-24T04:50:57.4348950Z [   8% ] reimport | tile_painted_gun_metal_albedo.png
+2026-10-24T04:50:57.4464117Z [   9% ] reimport | tile_painted_gun_metal_normal.png
+2026-10-24T04:50:57.4718014Z [   9% ] reimport | tile_painted_gun_metal_orm.png
+2026-10-24T04:50:57.4925637Z [  10% ] reimport | tile_rivet_panels_albedo.png
+2026-10-24T04:50:57.5605177Z [  11% ] reimport | tile_rivet_panels_normal.png
+2026-10-24T04:50:57.6762855Z [  11% ] reimport | tile_rivet_panels_orm.png
+2026-10-24T04:50:57.7819705Z [  12% ] reimport | tile_scifi_floor_panel_albedo.png
+2026-10-24T04:50:57.8169888Z [  12% ] reimport | tile_scifi_floor_panel_normal.png
+2026-10-24T04:50:57.8489339Z [  13% ] reimport | tile_scifi_floor_panel_orm.png
+2026-10-24T04:50:57.8633829Z [  14% ] reimport | column_albedo.png
+2026-10-24T04:50:58.1542347Z [  14% ] reimport | column_normal.png
+2026-10-24T04:50:58.5778249Z [  15% ] reimport | column_orm.png
+2026-10-24T04:50:58.9186909Z [  15% ] reimport | floor_grate_wholes_albedo.png
+2026-10-24T04:50:58.9337041Z [  16% ] reimport | floor_grate_wholes_normal.png
+2026-10-24T04:50:58.9596266Z [  16% ] reimport | floor_grate_wholes_orm.png
+2026-10-24T04:50:58.9836573Z [  17% ] reimport | light_shafts.png
+2026-10-24T04:50:59.0050559Z [  18% ] reimport | reactor_emitter_albedo.png
+2026-10-24T04:50:59.0700477Z [  18% ] reimport | reactor_emitter_normal.png
+2026-10-24T04:50:59.1956742Z [  19% ] reimport | reactor_emitter_orm.png
+2026-10-24T04:50:59.3125094Z [  19% ] reimport | set_asphalt_albedo.png
+2026-10-24T04:50:59.5946469Z [  20% ] reimport | set_asphalt_normal.png
+2026-10-24T04:51:00.1497614Z [  21% ] reimport | set_asphalt_orm.png
+2026-10-24T04:51:00.5385062Z [  21% ] reimport | tile_anti_slip_albedo.png
+2026-10-24T04:51:00.5524544Z [  22% ] reimport | tile_anti_slip_metal_normal.png
+2026-10-24T04:51:00.5890073Z [  22% ] reimport | tile_anti_slip_metal_orm.png
+2026-10-24T04:51:00.6127326Z [  23% ] reimport | tile_carbon_fiber_albedo.png
+2026-10-24T04:51:00.6199729Z [  23% ] reimport | tile_carbon_fiber_normal.png
+2026-10-24T04:51:00.6447174Z [  24% ] reimport | tile_carbon_fiber_orm.png
+2026-10-24T04:51:00.6620939Z [  25% ] reimport | trim_misc_1_normal.png
+2026-10-24T04:51:00.7821303Z [  25% ] reimport | trim_misc_1_orm.png
+2026-10-24T04:51:00.8718986Z [  26% ] reimport | trim_misc_2_albedo.png
+2026-10-24T04:51:00.9443388Z [  26% ] reimport | trim_misc_2_normal.png
+2026-10-24T04:51:01.0587977Z [  27% ] reimport | trim_misc_2_orm.png
+2026-10-24T04:51:01.1654039Z [  28% ] reimport | plasma.png
+2026-10-24T04:51:01.1675017Z [  28% ] reimport | experiment.hdr
+2026-10-24T04:51:01.1677116Z WARNING: Ignoring unsupported header information in HDR: GAMMA=1.
+2026-10-24T04:51:01.1677661Z      at: load_image (modules/hdr/image_loader_hdr.cpp:47)
+2026-10-24T04:51:01.1678231Z WARNING: Ignoring unsupported header information in HDR: PRIMARIES=0 0 0 0 0 0 0 0.
+2026-10-24T04:51:01.1678813Z      at: load_image (modules/hdr/image_loader_hdr.cpp:47)
+2026-10-24T04:51:03.4594213Z [  29% ] reimport | floor.png
+2026-10-24T04:51:03.7684793Z [  29% ] reimport | tps_demo.png
+2026-10-24T04:51:03.7743334Z [  30% ] reimport | BlastSpark.png
+2026-10-24T04:51:03.7758053Z [  30% ] reimport | FlarePolar.png
+2026-10-24T04:51:03.7998336Z [  31% ] reimport | FlareStraight.png
+2026-10-24T04:51:03.8384225Z [  32% ] reimport | blue_myst.png
+2026-10-24T04:51:03.8408026Z [  32% ] reimport | player_robot_albedo.png
+2026-10-24T04:51:03.9078707Z [  33% ] reimport | player_robot_emissive.png
+2026-10-24T04:51:03.9797334Z [  33% ] reimport | player_robot_normal.png
+2026-10-24T04:51:04.0974139Z [  34% ] reimport | player_robot_orm.png
+2026-10-24T04:51:04.2067671Z [  35% ] reimport | crosshair.png
+2026-10-24T04:51:04.2083382Z [  35% ] reimport | icon.png
+2026-10-24T04:51:04.2143992Z [  36% ] reimport | tile_simple_floor_albedo.png
+2026-10-24T04:51:04.2356887Z [  36% ] reimport | tile_simple_floor_normal.png
+2026-10-24T04:51:04.2633059Z [  37% ] reimport | tile_simple_floor_orm.png
+2026-10-24T04:51:04.2906775Z [  38% ] reimport | tile_steel_albedo.png
+2026-10-24T04:51:04.3019922Z [  38% ] reimport | tile_steel_normal.png
+2026-10-24T04:51:04.3128584Z [  39% ] reimport | tile_steel_orm.png
+2026-10-24T04:51:04.3274930Z [  39% ] reimport | tile_tech_panels_albedo.png
+2026-10-24T04:51:04.3439085Z [  40% ] reimport | tile_tech_panels_color_albedo.png
+2026-10-24T04:51:04.3610153Z [  40% ] reimport | tile_tech_panels_color_normal.png
+2026-10-24T04:51:04.6031779Z [  41% ] reimport | tile_tech_panels_color_orm.png
+2026-10-24T04:51:04.6278044Z [  42% ] reimport | tile_tech_panels_normal.png
+2026-10-24T04:51:04.6592158Z [  42% ] reimport | tile_tech_panels_orm.png
+2026-10-24T04:51:04.6833554Z [  43% ] reimport | train_texture_albedo.png
+2026-10-24T04:51:04.9998126Z [  43% ] reimport | train_texture_normal.png
+2026-10-24T04:51:05.4668903Z [  44% ] reimport | train_texture_orm.png
+2026-10-24T04:51:05.8725491Z [  45% ] reimport | trim_emission_lights_albedo.png
+2026-10-24T04:51:05.9852880Z [  45% ] reimport | trim_emission_lights_emission.png
+2026-10-24T04:51:06.0109588Z [  46% ] reimport | trim_emission_lights_normal.png
+2026-10-24T04:51:06.2788944Z [  46% ] reimport | trim_emission_lights_orm.png
+2026-10-24T04:51:06.6469323Z [  47% ] reimport | trim_misc_1_albedo.png
+2026-10-24T04:51:06.7338699Z [  47% ] reimport | container1_normal.png
+2026-10-24T04:51:07.0091134Z [  48% ] reimport | container1_albedo.png
+2026-10-24T04:51:07.2537111Z [  49% ] reimport | scificar_orm.png
+2026-10-24T04:51:07.3673749Z [  49% ] reimport | scificar_normal.png
+2026-10-24T04:51:07.4871044Z [  50% ] reimport | scificar_emissive.png
+2026-10-24T04:51:07.5679243Z [  50% ] reimport | scificar_albedo.png
+2026-10-24T04:51:07.6820043Z [  51% ] reimport | flying_forklift_orm.png
+2026-10-24T04:51:07.7904499Z [  52% ] reimport | flying_forklift_normal.png
+2026-10-24T04:51:07.9134480Z [  52% ] reimport | flying_forklift_emission.png
+2026-10-24T04:51:07.9657574Z [  53% ] reimport | flying_forklift_albedo.png
+2026-10-24T04:51:08.0673179Z [  53% ] reimport | dot.png
+2026-10-24T04:51:08.0685087Z [  54% ] reimport | red_robot_orm.png
+2026-10-24T04:51:08.1856985Z [  54% ] reimport | red_robot_normal.png
+2026-10-24T04:51:08.3252307Z [  55% ] reimport | red_robot_emission.png
+2026-10-24T04:51:08.4038692Z [  56% ] reimport | red_robot_albedo.png
+2026-10-24T04:51:08.5073491Z [  56% ] reimport | ray_texture.png
+2026-10-24T04:51:08.5090908Z [  57% ] reimport | ray_smoke_texture.png
+2026-10-24T04:51:08.5109354Z [  57% ] reimport | particle.png
+2026-10-24T04:51:08.5120978Z [  58% ] reimport | explosion.png
+2026-10-24T04:51:08.5178662Z [  59% ] reimport | SparkTexture.png
+2026-10-24T04:51:08.5200849Z [  59% ] reimport | FireTrailParticle.png
+2026-10-24T04:51:08.5216687Z [  60% ] reimport | BarrelSmokeTexture.png
+2026-10-24T04:51:08.5246106Z [  60% ] reimport | SmokePuffNormals.png
+2026-10-24T04:51:08.5359094Z [  61% ] reimport | SmokePuff.png
+2026-10-24T04:51:08.5524061Z [  61% ] reimport | LightRays.png
+2026-10-24T04:51:08.5571311Z [  62% ] reimport | spotlight_projector.png
+2026-10-24T04:51:08.5652884Z [  63% ] reimport | BlastTexture.png
+2026-10-24T04:51:08.5831824Z [  63% ] reimport | door_orm.png
+2026-10-24T04:51:08.6827083Z [  64% ] reimport | door_normal.png
+2026-10-24T04:51:08.8135131Z [  64% ] reimport | door_emission.png
+2026-10-24T04:51:08.8907764Z [  65% ] reimport | door_albedo.png
+2026-10-24T04:51:08.9834922Z [  66% ] reimport | reactor_cylinder_orm.png
+2026-10-24T04:51:09.0111794Z [  66% ] reimport | reactor_cylinder_normal.png
+2026-10-24T04:51:09.0400248Z [  67% ] reimport | reactor_cylinder_emissive.png
+2026-10-24T04:51:09.0569239Z [  67% ] reimport | reactor_cylinder_albedo.png
+2026-10-24T04:51:09.0759291Z [  68% ] reimport | mid_cargo_box_orm.png
+2026-10-24T04:51:09.1857429Z [  69% ] reimport | core_fire_noise.png
+2026-10-24T04:51:09.1950168Z [  69% ] reimport | mid_cargo_box_normal.png
+2026-10-24T04:51:09.3200362Z [  70% ] reimport | mid_cargo_box_albedo.png
+2026-10-24T04:51:09.4179054Z [  70% ] reimport | door_reactor_orm.png
+2026-10-24T04:51:09.5299611Z [  71% ] reimport | door_reactor_normal.png
+2026-10-24T04:51:09.6709432Z [  71% ] reimport | door_reactor_emission.png
+2026-10-24T04:51:09.7520964Z [  72% ] reimport | door_reactor_albedo.png
+2026-10-24T04:51:09.8798194Z [  73% ] reimport | door_orm.png
+2026-10-24T04:51:09.9791388Z [  73% ] reimport | door_normal.png
+2026-10-24T04:51:10.1069083Z [  74% ] reimport | door_emission.png
+2026-10-24T04:51:10.1834227Z [  74% ] reimport | container1_orm.png
+2026-10-24T04:51:10.5354803Z [  75% ] reimport | container2_albedo.png
+2026-10-24T04:51:10.5546951Z [  76% ] reimport | container2_normal.png
+2026-10-24T04:51:10.5876838Z [  76% ] reimport | container2_orm.png
+2026-10-24T04:51:10.6168114Z [  77% ] reimport | container3_albedo.png
+2026-10-24T04:51:10.6338036Z [  77% ] reimport | container3_normal.png
+2026-10-24T04:51:10.6610797Z [  78% ] reimport | core_out_light.png
+2026-10-24T04:51:10.6678873Z [  78% ] reimport | door_albedo.png
+2026-10-24T04:51:10.7600217Z [  79% ] reimport | core_inner_noise2.png
+2026-10-24T04:51:10.7690318Z [  80% ] reimport | container4_orm.png
+2026-10-24T04:51:10.7981819Z [  80% ] reimport | container4_normal.png
+2026-10-24T04:51:10.8304100Z [  81% ] reimport | container4_albedo.png
+2026-10-24T04:51:10.8492857Z [  81% ] reimport | container3_orm.png
+2026-10-24T04:51:10.8768013Z [  82% ] reimport | core_inner_noise.png
+2026-10-24T04:51:10.8841895Z [  83% ] reimport | core_laval_spotches.png
+2026-10-24T04:51:10.8867190Z [  83% ] reimport | step.wav
+2026-10-24T04:51:10.8891995Z [  84% ] reimport | shoot.wav
+2026-10-24T04:51:10.8918289Z [  84% ] reimport | land.wav
+2026-10-24T04:51:10.8936558Z [  85% ] reimport | jump.wav
+2026-10-24T04:51:10.8951472Z [  85% ] reimport | explosion.wav
+2026-10-24T04:51:10.9121375Z [  86% ] reimport | hit.wav
+2026-10-24T04:51:10.9150005Z [  87% ] reimport | shoot.wav
+2026-10-24T04:51:10.9234796Z [  87% ] reimport | walk.wav
+2026-10-24T04:51:10.9271207Z [  88% ] reimport | charge.wav
+2026-10-24T04:51:10.9351046Z [  88% ] reimport | open_close.wav
+2026-10-24T04:51:10.9399769Z [  89% ] reimport | bullet_explode.wav
+2026-10-24T04:51:10.9453201Z [  90% ] reimport | CoreOutLight.glb
+2026-10-24T04:51:10.9456903Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:10.9474549Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:10.9512173Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:10.9513070Z [  99% ] import | Saving...
+2026-10-24T04:51:10.9533397Z [ DONE ] import
+2026-10-24T04:51:10.9533874Z
+2026-10-24T04:51:10.9543876Z [  90% ] reimport | player.glb
+2026-10-24T04:51:10.9546799Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:10.9547303Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:11.5346368Z ERROR: Animation name "Cannon_Charge" already exists in library.
+2026-10-24T04:51:11.5347035Z    at: rename_animation (scene/resources/animation_library.cpp:78)
+2026-10-24T04:51:11.6911357Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:11.6912104Z [  99% ] import | Saving...
+2026-10-24T04:51:11.8866983Z [ DONE ] import
+2026-10-24T04:51:11.8867372Z
+2026-10-24T04:51:11.9357924Z [  91% ] reimport | door.dae
+2026-10-24T04:51:11.9360262Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:11.9361014Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.1042994Z ERROR: Failed loading resource: res://door/model/doorsimple_d.png.
+2026-10-24T04:51:12.1043781Z    at: _load (core/io/resource_loader.cpp:317)
+2026-10-24T04:51:12.1291010Z ERROR: Condition "surfaces.is_empty()" is true. Returning: Ref<ArrayMesh>()
+2026-10-24T04:51:12.1291647Z    at: get_mesh (scene/resources/3d/importer_mesh.cpp:860)
+2026-10-24T04:51:12.1417793Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.1418353Z [  99% ] import | Saving...
+2026-10-24T04:51:12.1492588Z [ DONE ] import
+2026-10-24T04:51:12.1493386Z
+2026-10-24T04:51:12.1621629Z [  91% ] reimport | BlastMesh.glb
+2026-10-24T04:51:12.1624242Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.1624787Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.1649432Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.1649935Z [  99% ] import | Saving...
+2026-10-24T04:51:12.1659825Z [ DONE ] import
+2026-10-24T04:51:12.1660099Z
+2026-10-24T04:51:12.1669117Z [  92% ] reimport | LightRaysMesh.glb
+2026-10-24T04:51:12.1671813Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.1672295Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.1680508Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.1680926Z [  99% ] import | Saving...
+2026-10-24T04:51:12.1688443Z [ DONE ] import
+2026-10-24T04:51:12.1688717Z
+2026-10-24T04:51:12.1697639Z [  92% ] reimport | BarrelSmoke.glb
+2026-10-24T04:51:12.1700175Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.1700632Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.1712273Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.1713094Z [  99% ] import | Saving...
+2026-10-24T04:51:12.1720449Z [ DONE ] import
+2026-10-24T04:51:12.1720735Z
+2026-10-24T04:51:12.1729414Z [  93% ] reimport | red_robot.glb
+2026-10-24T04:51:12.1732147Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.1732646Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.3464476Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.3465072Z [  99% ] import | Saving...
+2026-10-24T04:51:12.3869891Z [ DONE ] import
+2026-10-24T04:51:12.3870511Z
+2026-10-24T04:51:12.4009818Z [  94% ] reimport | SparkParticle.glb
+2026-10-24T04:51:12.4012189Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.4013149Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.4027555Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.4028044Z [  99% ] import | Saving...
+2026-10-24T04:51:12.4036842Z [ DONE ] import
+2026-10-24T04:51:12.4037146Z
+2026-10-24T04:51:12.4046424Z [  94% ] reimport | part_head.glb
+2026-10-24T04:51:12.4049314Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.4049838Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.4313589Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.4314286Z [  99% ] import | Saving...
+2026-10-24T04:51:12.4342748Z [ DONE ] import
+2026-10-24T04:51:12.4343530Z
+2026-10-24T04:51:12.4361070Z [  95% ] reimport | part_shield.glb
+2026-10-24T04:51:12.4363996Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.4364545Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.4435112Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.4435569Z [  99% ] import | Saving...
+2026-10-24T04:51:12.4444477Z [ DONE ] import
+2026-10-24T04:51:12.4444925Z
+2026-10-24T04:51:12.4454709Z [  95% ] reimport | ray.glb
+2026-10-24T04:51:12.4457614Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.4458129Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.4469368Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.4469844Z [  99% ] import | Saving...
+2026-10-24T04:51:12.4477843Z [ DONE ] import
+2026-10-24T04:51:12.4478128Z
+2026-10-24T04:51:12.4486870Z [  96% ] reimport | flying_forklift.glb
+2026-10-24T04:51:12.4489579Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.4490109Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:12.5685141Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:12.5685714Z [  99% ] import | Saving...
+2026-10-24T04:51:12.5886807Z [ DONE ] import
+2026-10-24T04:51:12.5887233Z
+2026-10-24T04:51:12.6002608Z [  97% ] reimport | core.glb
+2026-10-24T04:51:12.6007628Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:12.6008225Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:13.4835833Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:13.4836814Z [  99% ] import | Saving...
+2026-10-24T04:51:13.6197565Z [ DONE ] import
+2026-10-24T04:51:13.6198063Z
+2026-10-24T04:51:13.6579940Z [  97% ] reimport | lights.glb
+2026-10-24T04:51:13.6582283Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:13.6583310Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:13.6685364Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:13.6686088Z [  99% ] import | Saving...
+2026-10-24T04:51:13.6738685Z [ DONE ] import
+2026-10-24T04:51:13.6739245Z
+2026-10-24T04:51:13.6750669Z [  98% ] reimport | props.glb
+2026-10-24T04:51:13.6754303Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:13.6755053Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:15.7596578Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:15.7601894Z [  99% ] import | Saving...
+2026-10-24T04:51:15.9855846Z [ DONE ] import
+2026-10-24T04:51:15.9856488Z
+2026-10-24T04:51:16.0512057Z [  98% ] reimport | structure.glb
+2026-10-24T04:51:16.0516790Z [   0% ] import | Started Import Scene (104 steps)
+2026-10-24T04:51:16.0517783Z [   0% ] import | Importing Scene...
+2026-10-24T04:51:18.8709499Z [   1% ] import | Running Custom Script...
+2026-10-24T04:51:18.8733617Z [  99% ] import | Saving...
+2026-10-24T04:51:19.1814957Z [ DONE ] import
+2026-10-24T04:51:19.1815471Z
+2026-10-24T04:51:19.4624852Z [  99% ] reimport | Finalizing Asset Import...
+2026-10-24T04:51:19.4637031Z [ DONE ] reimport
+2026-10-24T04:51:19.4637395Z
+2026-10-24T04:51:19.4637812Z [   0% ] reimport | Started (Re)Importing Assets (170 steps)
+2026-10-24T04:51:19.4644516Z [   0% ] reimport | Executing post-reimport operations...
+2026-10-24T04:51:19.4645303Z [ DONE ] reimport
+2026-10-24T04:51:19.4645889Z
+2026-10-24T04:51:19.5202549Z [   0% ] loading_editor_layout | Started Loading editor (5 steps)
+2026-10-24T04:51:19.5203940Z [   0% ] loading_editor_layout | Loading editor layout...
+2026-10-24T04:51:19.5204469Z [  16% ] loading_editor_layout | Loading docks...
+2026-10-24T04:51:19.5204914Z [ DONE ] loading_editor_layout
+2026-10-24T04:51:19.5205202Z
+2026-10-24T04:51:20.8796397Z ##[group]Run "${GODOT}" --headless --path . res://tests/test_runner.tscn 2>&1 | tee tests.log
+2026-10-24T04:51:20.8797170Z "${GODOT}" --headless --path . res://tests/test_runner.tscn 2>&1 | tee tests.log
+2026-10-24T04:51:20.8797718Z grep -q "RESULT: .* 0 failed" tests.log
+2026-10-24T04:51:20.8860213Z shell: /usr/bin/bash -e {0}
+2026-10-24T04:51:20.8860457Z env:
+2026-10-24T04:51:20.8860653Z   GODOT_VERSION: 4.7.2-stable
+2026-10-24T04:51:20.8860912Z   GODOT: /home/runner/work/_temp/godot
+2026-10-24T04:51:20.8861172Z ##[endgroup]
+2026-10-24T04:51:20.9125573Z Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+2026-10-24T04:51:20.9397813Z
+2026-10-24T04:51:21.0013213Z WARNING: HDR output requested, but it is not supported by this display server.
+2026-10-24T04:51:21.0014590Z      at: window_request_hdr_output (servers/display/display_server.cpp:1307)
+2026-10-24T04:51:21.0214229Z ROSHAN TPS test suite — Godot 4.7.2-stable (official)
+2026-10-24T04:51:21.0215245Z Physics server: PhysicsServer3D | project setting physics/3d/physics_engine = Bullet
+2026-10-24T04:51:22.6076583Z [PASS] All 114 scenes/scripts/resources load
+2026-10-24T04:51:22.6107235Z [PASS] All 14 input actions used by scripts exist in InputMap
+2026-10-24T04:51:22.6108005Z [PASS] Settings autoload populates every default key
+2026-10-24T04:51:22.6108653Z [PASS] SSAO setting -1 -> ssao_enabled is false
+2026-10-24T04:51:22.6109231Z [PASS] SSIL setting -1 -> ssil_enabled is false
+2026-10-24T04:51:22.6109761Z [PASS] SSAO setting 2 -> ssao_enabled is true
+2026-10-24T04:51:22.6110287Z [PASS] SSIL setting 2 -> ssil_enabled is true
+2026-10-24T04:51:22.6110798Z [PASS] SSAO setting 3 -> ssao_enabled is true
+2026-10-24T04:51:22.6111302Z [PASS] SSIL setting 3 -> ssil_enabled is true
+2026-10-24T04:51:22.6111819Z [PASS] Window/application title is ROSHAN TPS
+2026-10-24T04:51:22.6286945Z [PASS] Loading screen text shows ROSHAN TPS
+2026-10-24T04:51:23.8248798Z [PASS] Menu -> level transition completes
+2026-10-24T04:51:23.8249403Z        level loaded in 1.2 s
+2026-10-24T04:51:23.9033204Z [PASS] Local player spawned
+2026-10-24T04:51:23.9034067Z [PASS] Enemy robots spawned (4)
+2026-10-24T04:51:23.9723426Z [PASS] Player lands on the floor (collision with level)
+2026-10-24T04:51:24.9728845Z [PASS] Forward input moves the player
+2026-10-24T04:51:26.1390000Z [PASS] Jump input lifts the player
+2026-10-24T04:51:26.5047328Z [PASS] Player lands again after jumping
+2026-10-24T04:51:26.5115902Z [PASS] Mouse motion rotates the camera
+2026-10-24T04:51:26.6703323Z [PASS] Aim input enters aiming mode
+2026-10-24T04:51:27.0064100Z [PASS] Shooting while aiming spawns bullets
+2026-10-24T04:51:27.0892153Z [PASS] Enemy takes damage when hit
+2026-10-24T04:51:27.0893158Z [PASS] Enemy dies and emits 'exploded' at zero health
+2026-10-24T04:51:27.1853512Z [PASS] Quit action returns to the main menu
+2026-10-24T04:51:28.0525303Z [PASS] Second session starts after returning to menu (scene re-entry)
+2026-10-24T04:51:28.2907881Z
+2026-10-24T04:51:28.2913330Z RESULT: 25 passed, 0 failed
+2026-10-24T04:51:28.3992470Z WARNING: 230 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+2026-10-24T04:51:28.3993341Z    at: cleanup (core/object/object.cpp:2536)
+2026-10-24T04:51:28.4616050Z ##[group]Run actions/upload-artifact@v4
+2026-10-24T04:51:28.4616355Z with:
+2026-10-24T04:51:28.4616549Z   name: godot-logs
+2026-10-24T04:51:28.4616769Z   path: import.log
+tests.log
+
+2026-10-24T04:51:28.4617018Z   if-no-files-found: warn
+2026-10-24T04:51:28.4617249Z   compression-level: 6
+2026-10-24T04:51:28.4617463Z   overwrite: false
+2026-10-24T04:51:28.4617669Z   include-hidden-files: false
+2026-10-24T04:51:28.4617887Z env:
+2026-10-24T04:51:28.4618066Z   GODOT_VERSION: 4.7.2-stable
+2026-10-24T04:51:28.4618307Z   GODOT: /home/runner/work/_temp/godot
+2026-10-24T04:51:28.4618578Z ##[endgroup]
+2026-10-24T04:51:28.6221618Z (node:2808) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-24T04:51:28.6223116Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-24T04:51:28.6304317Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-24T04:51:28.6306227Z The least common ancestor is /home/runner/work/roshan-tps-godot/roshan-tps-godot. This will be the root directory of the artifact
+2026-10-24T04:51:28.6307324Z With the provided path, there will be 2 files uploaded
+2026-10-24T04:51:28.6308115Z Artifact name is valid!
+2026-10-24T04:51:28.6308500Z Root directory input is valid!
+2026-10-24T04:51:28.9224397Z Beginning upload of artifact content to blob storage
+2026-10-24T04:51:28.9449034Z (node:2808) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-24T04:51:29.1027765Z Uploaded bytes 5019
+2026-10-24T04:51:29.1505350Z Finished uploading artifact content to blob storage!
+2026-10-24T04:51:29.1506949Z SHA256 digest of uploaded artifact zip is 3844d343fb77843d0b2ffbd3b0f64ebdf1670931dcf0941f973f3e0a23f9683a
+2026-10-24T04:51:29.1508540Z Finalizing artifact upload
+2026-10-24T04:51:29.5799112Z Artifact godot-logs.zip successfully finalized. Artifact ID 12548910646
+2026-10-24T04:51:29.5799939Z Artifact godot-logs has been successfully uploaded! Final size is 5019 bytes. Artifact ID is 12548910646
+2026-10-24T04:51:29.5806897Z Artifact download URL: https://github.com/Manash07Bhoi/roshan-tps-godot/actions/runs/40063929734/artifacts/12548910646
+2026-10-24T04:51:29.6019179Z Post job cleanup.
+2026-10-24T04:51:29.6849694Z [command]/usr/bin/git version
+2026-10-24T04:51:29.6892095Z git version 2.55.0
+2026-10-24T04:51:29.6931260Z Temporarily overriding HOME='/home/runner/work/_temp/fa602243-7d22-41de-ad7c-5db081375ae4' before making global git config changes
+2026-10-24T04:51:29.6932793Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-24T04:51:29.6938001Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/roshan-tps-godot/roshan-tps-godot
+2026-10-24T04:51:29.6977724Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-24T04:51:29.7015325Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-24T04:51:29.7267003Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-24T04:51:29.7298238Z http.https://github.com/.extraheader
+2026-10-24T04:51:29.7310208Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-24T04:51:29.7345511Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-24T04:51:29.7610310Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-24T04:51:29.7646881Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-24T04:51:29.8029530Z Cleaning up orphan processes
+2026-10-24T04:51:29.8447076Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

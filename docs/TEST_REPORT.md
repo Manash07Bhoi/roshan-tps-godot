@@ -46,7 +46,7 @@ llvmpipe for OpenGL 4.5). There is no sound device, gamepad, second machine or A
 | 20 | Escape returns to the menu; QUIT exits cleanly | graphical (Compatibility) | **PASS** (process exit code 0) | `screenshots/after_back_to_menu.png`, runtime log |
 | 21 | SSAO "Disabled" honoured (defect D1) | automated checks 4–9 | **PASS** after the fix (it **FAILED** on upstream) | `evidence/tests_baseline.log` vs `tests_after_ssao_fix.log` |
 | 22 | Clean clone from GitHub, then import and tests | fresh `git clone` of the public repo | **PASS** (see §6) | `evidence/clean_clone*.log` |
-| 23 | GitHub Actions CI (import and tests on ubuntu-24.04) | workflow `godot_ci.yml` | see §7 | Actions tab |
+| 23 | GitHub Actions CI (import and tests on ubuntu-24.04) | workflow `godot_ci.yml` | **PASS**: run 40063929734 on `6d80148`, 25/0 (see §7) | `evidence/ci_run_40063929734.log` |
 | 24 | Online multiplayer: host / connect | (none) | **NOT TESTED**: needs two networked game instances with a working renderer; the UI panel was tested only (row 8) | (none) |
 | 25 | Gamepad input | (none) | **NOT TESTED**: no controller. Gamepad bindings exist in the input map (automated check 2 confirms the actions exist, not the devices). | (none) |
 | 26 | Audio output (music, SFX) | (none) | **NOT TESTED**: no sound device (headless uses dummy audio). The audio files are unchanged from upstream. | (none) |
@@ -146,7 +146,7 @@ This was verified mechanically against upstream `a82f154`, on the final tree inc
 | Deleted / renamed / copied (`git diff -M --name-status`) | **0** |
 | Changed files with asset extensions (png, jpg, exr, hdr, svg, dae, glb, mesh, res, tres, material, anim, ogg, wav, ttf, shader, import, …) | **0** |
 | `menu/tps_demo.png` (original title logo), `icon.png`, boot splash | unchanged, still used |
-| Added files | 58: tests (3), CI workflow (1), docs, evidence, screenshots, `THIRD_PARTY_NOTICES.md`, `media/` |
+| Added files | 59: tests (3), CI workflow (1), docs, evidence, screenshots, `THIRD_PARTY_NOTICES.md`, `media/` |
 
 `docs/` and `media/` contain a `.gdignore`, so Godot never imports the documentation images
 or the video as game assets. `LICENSE.md` is byte-identical to upstream.
@@ -186,9 +186,18 @@ Workflow `.github/workflows/godot_ci.yml` runs on push, pull request and manual 
 The upstream `static_checks.yml` (`file_format.sh`) is kept. That script also passes
 locally on every commit.
 
-CI run results are recorded in `docs/FINAL_HANDOFF.md` (item 11). Upstream's initial
-3-branch push to the new repository did not trigger any workflow runs, so the first runs
-come from the push that adds this report.
+**Result:** run [40063929734](https://github.com/Manash07Bhoi/roshan-tps-godot/actions/runs/40063929734)
+on `6d80148` (trigger: manual `workflow_dispatch`) finished with **success** in 53 s.
+* The Godot zip checksum printed `OK`.
+* The import showed only the 3 upstream asset messages from §3.
+* The tests printed 25 `[PASS]` lines and `RESULT: 25 passed, 0 failed`.
+
+The full job log is in `evidence/ci_run_40063929734.log`.
+
+**Limitation:** pushes to this new repository have not started workflow runs, even though
+Actions is enabled and both workflows are active. Manual dispatch does work. Because the
+upstream `static_checks.yml` has no dispatch trigger, it has not run on GitHub; its script
+passes locally.
 
 ## 8. Graphical-test caveats
 
