@@ -135,10 +135,10 @@ func test_settings_ssao_and_ssil_mapping() -> void:
 		Settings.config_file.set_value("rendering", "ssil_quality", c[0])
 		Settings.apply_graphics_settings(get_window(), env, scene_root)
 		check(env.ssao_enabled == c[1],
-				"SSAO setting %d -> ssao_enabled == %s" % [c[0], c[1]],
+				"SSAO setting %d -> ssao_enabled is %s" % [c[0], c[1]],
 				"got " + str(env.ssao_enabled))
 		check(env.ssil_enabled == c[1],
-				"SSIL setting %d -> ssil_enabled == %s" % [c[0], c[1]],
+				"SSIL setting %d -> ssil_enabled is %s" % [c[0], c[1]],
 				"got " + str(env.ssil_enabled))
 
 	scene_root.queue_free()
