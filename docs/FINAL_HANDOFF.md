@@ -159,7 +159,7 @@ renderer.
 ## 16. Development-story video
 
 [`media/ROSHAN_TPS_Development_Story.mp4`](../media/ROSHAN_TPS_Development_Story.mp4):
-29.0 s, 1080×1920, 30 fps, H.264 High with AAC, 7.4 MB.
+29.0 s, 1080×1920, 30 fps, H.264 High with AAC, 6.9 MB.
 * Built **only from real footage**: the terminal session, Forward+ menu capture,
   Compatibility gameplay capture and GitHub screenshots.
 * Speed-ups (8× and 10×) are labelled on screen. Captions disclose the software rendering,

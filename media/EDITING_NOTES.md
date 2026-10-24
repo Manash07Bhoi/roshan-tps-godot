@@ -7,7 +7,7 @@
 | Frame rate | 30 fps (constant) |
 | Video | H.264 High profile, yuv420p, `+faststart` |
 | Audio | AAC-LC 48 kHz stereo, 160 kb/s, loudness-normalised to about −16 LUFS |
-| File size | 7.4 MB |
+| File size | 6.9 MB (6,915,533 bytes) |
 | SHA-256 | `1f6578971157aadc0326601061c62f22626f102176871ad1dfc94530f2520db1` |
 
 ## Honesty rules followed
