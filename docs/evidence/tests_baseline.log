@@ -1,0 +1,37 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+WARNING: HDR output requested, but it is not supported by this display server.
+     at: window_request_hdr_output (servers/display/display_server.cpp:1307)
+ROSHAN TPS test suite — Godot 4.7.2-stable (official)
+Physics server: PhysicsServer3D | project setting physics/3d/physics_engine = Bullet
+[PASS] All 114 scenes/scripts/resources load
+[PASS] All 14 input actions used by scripts exist in InputMap
+[PASS] Settings autoload populates every default key
+[FAIL] SSAO setting -1 -> ssao_enabled is false  -> got true
+[PASS] SSIL setting -1 -> ssil_enabled is false
+[PASS] SSAO setting 2 -> ssao_enabled is true
+[PASS] SSIL setting 2 -> ssil_enabled is true
+[PASS] SSAO setting 3 -> ssao_enabled is true
+[PASS] SSIL setting 3 -> ssil_enabled is true
+[FAIL] Window/application title is ROSHAN TPS  -> Godot Third-Person Shooter Demo
+[FAIL] Loading screen text shows ROSHAN TPS  -> Loading...
+[PASS] Menu -> level transition completes
+       level loaded in 1.4 s
+[PASS] Local player spawned
+[PASS] Enemy robots spawned (4)
+[PASS] Player lands on the floor (collision with level)
+[PASS] Forward input moves the player
+[PASS] Jump input lifts the player
+[PASS] Player lands again after jumping
+[PASS] Mouse motion rotates the camera
+[PASS] Aim input enters aiming mode
+[PASS] Shooting while aiming spawns bullets
+[PASS] Enemy takes damage when hit
+[PASS] Enemy dies and emits 'exploded' at zero health
+[PASS] Quit action returns to the main menu
+[PASS] Second session starts after returning to menu (scene re-entry)
+
+RESULT: 22 passed, 3 failed
+WARNING: 230 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 1 RID allocations of type 'N13RendererDummy9DummyMeshE' were leaked at exit.

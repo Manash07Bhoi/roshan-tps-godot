@@ -1,0 +1,28 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:372)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+
+WARNING: FSR2 3D scaling is only available when using the Forward+ renderer.
+     at: viewport_set_scaling_3d_mode (servers/rendering/renderer_viewport.cpp:1032)
+WARNING: HDR output requested, but it is not supported by this display server.
+     at: window_request_hdr_output (servers/display/display_server.cpp:1307)
+WARNING: Volumetric fog is only available when using the Forward+ renderer.
+     at: environment_set_volumetric_fog (servers/rendering/storage/environment_storage.cpp:458)
+     GDScript backtrace (most recent call first):
+         [0] go_to_main_menu (res://main/main.gd:14)
+         [1] _ready (res://main/main.gd:10)
+ERROR: shader type fog not supported in OpenGL renderer
+   at: shader_set_code (drivers/gles3/storage/material_storage.cpp:2283)
+   GDScript backtrace (most recent call first):
+       [0] change_scene_to_packed (res://main/main.gd:25)
+       [1] go_to_main_menu (res://main/main.gd:17)
+       [2] _ready (res://main/main.gd:10)
+WARNING: The Compatibility renderer does not support SDF collisions in 3D particle shaders
+     at: particles_collision_set_field_texture (drivers/gles3/storage/particles_storage.cpp:1419)
+     GDScript backtrace (most recent call first):
+         [0] change_scene_to_packed (res://main/main.gd:25)
+WARNING: SDF Particle Colliders are not available in the Compatibility renderer.
+     at: _particles_process (drivers/gles3/storage/particles_storage.cpp:707)
+WARNING: 174 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)

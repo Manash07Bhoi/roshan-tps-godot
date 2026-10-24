@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+WARNING: HDR output requested, but it is not supported by this display server.
+     at: window_request_hdr_output (servers/display/display_server.cpp:1307)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)
+WARNING: [Physics interpolation] Interpolated Camera3D triggered from outside physics process: "/root/main/Level/SpawnedNodes/1/CameraBase/CameraRot/SpringArm3D/Camera3D" (possibly benign).
+     at: _notification (scene/3d/camera_3d.cpp:218)

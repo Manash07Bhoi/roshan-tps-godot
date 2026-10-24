@@ -1,67 +1,129 @@
-# Third Person Shooter Demo
+# ROSHAN TPS
 
-Third person shooter demo made using [Godot Engine](https://godotengine.org).
+A personal third-person shooter for me and my friends, running on
+**Godot 4.7.2-stable**.
 
-Check out this demo on the asset library: https://godotengine.org/asset-library/asset/678
+**Developer / modifier:** Roshan
 
-![Screenshot of TPS demo](screenshots/screenshot.webp)
+> **This is a personal derivative of the official Godot Third-Person Shooter demo**
+> (<https://github.com/godotengine/tps-demo>). The gameplay code, every 3D model,
+> animation, texture, sound and music track were made by the upstream authors.
+> See [Credits & licence](#credits--licence). My changes are a text-only
+> rebrand, a settings bug fix, an automated test suite, CI and documentation.
+> Full list: [`docs/CHANGES_FROM_UPSTREAM.md`](docs/CHANGES_FROM_UPSTREAM.md).
 
-## Godot versions
+![ROSHAN TPS gameplay: aiming (real capture, software-rendered, Compatibility renderer)](docs/screenshots/after_gameplay_aim.png)
 
-- The [`master`](https://github.com/godotengine/tps-demo) branch is compatible with the latest stable Godot version (currently 4.x).
-- If you are using an older version of Godot, use the appropriate branch for your Godot version:
+*Real screenshot from a validation run on a GPU-less cloud machine (OpenGL
+Compatibility renderer, software rendering, 960×540). On a real GPU with the
+default Forward+ renderer the game looks considerably better (volumetric fog,
+GI, SSAO).*
 
-  - [`3.x`](https://github.com/godotengine/tps-demo/tree/3.x) branch
-  for Godot 3.4.x and 3.5.x.
-  - [`3.3`](https://github.com/godotengine/tps-demo/tree/3.3) branch
-  for Godot 3.3.x.
-  - [`3.2`](https://github.com/godotengine/tps-demo/tree/3.2) branch
-  for Godot 3.2.2 or 3.2.3.
-  - [`3.2.1`](https://github.com/godotengine/tps-demo/tree/3.2.1) branch
-  for Godot 3.2.0 or 3.2.1.
-  - [`3.1`](https://github.com/godotengine/tps-demo/tree/3.1) branch
-  for Godot 3.1.x.
+## What's in the game (all inherited from upstream and verified)
 
-> **Note**
->
-> The repository is big, so expect a high wait time when opening the project for
-> the first time.
+* Third-person robot character: run, jump, mouse/gamepad camera with collision-aware spring arm.
+* Aim mode (toggle or hold) with over-the-shoulder camera and crosshair; shooting with bullet impacts.
+* Red-robot enemies that detect, approach, charge and fire lasers. They take damage, explode into parts and respawn after 15 s.
+* Large industrial level with LightmapGI / VoxelGI / SDFGI options, reflection probes, volumetric fog.
+* Main menu with animated 3D background, graphics settings (display mode, V-Sync, FPS cap,
+  resolution scale & FSR, TAA/MSAA/FXAA/SMAA, shadows, GI type/quality, SSAO, SSIL,
+  bloom, volumetric fog), saved to `user://settings.ini`.
+* **Play Online**: host or connect to a LAN/IP game (ENet, upstream feature).
+* F3 debug overlay (FPS, V-Sync, memory, online status).
 
-## Git LFS
+What changed in ROSHAN TPS:
 
-Git LFS is no longer required for the current `master` or `3.x` branches.
+* Window title, loading screen text and F3 overlay say **ROSHAN TPS**.
+* Fixed: *SSAO → Disabled* was ignored (SSAO stayed on).
+* Headless automated test suite (`tests/`) and GitHub Actions CI.
 
-You only need Git LFS if you are checking out the `3.1` or `3.2.1` branches.
-Those branches have instructions for Git LFS in their README files.
+## Branding note
 
-## Running
+The rebrand is **text-only by design**: no image assets were replaced. The main
+menu still shows the original **"TPS Demo" title image**, the upstream window
+icon and the Godot boot splash.
 
-You need [Godot Engine](https://godotengine.org) to run this demo project.
-Download the latest stable version [from the website](https://godotengine.org/download/),
-or [build it from source](https://github.com/godotengine/godot).
+## Requirements
 
-You can either download from the Godot Asset Library, clone this repository, or
-[download a ZIP archive](https://github.com/godotengine/tps-demo/archive/master.zip).
+* **Godot 4.7.2-stable**, standard build (not .NET):
+  <https://godotengine.org/download/archive/4.7.2-stable/>
+* A GPU with Vulkan support is recommended (Forward+ renderer). The project is about 1.3 GB.
+  The first import takes a while.
+
+## Install & run
+
+```bash
+git clone https://github.com/Manash07Bhoi/roshan-tps-godot.git
+cd roshan-tps-godot
+# Open in the editor (first import may take a few minutes):
+godot --editor --path .
+# …or run the game directly:
+godot --path .
+```
+
+The game starts in exclusive fullscreen by default. Use **F11** or **Alt+Enter**
+to toggle, or change *Display Mode* in Settings.
+
+If your machine has no Vulkan-capable GPU, you can try the OpenGL renderer:
+`godot --path . --rendering-method gl_compatibility` (fewer effects).
 
 ## Controls
 
-- Mouse or <kbd>Gamepad Right Stick</kbd>: Look around
-- <kbd>W</kbd>/<kbd>A</kbd>/<kbd>S</kbd>/<kbd>D</kbd>, <kbd>Arrow keys</kbd>, <kbd>Gamepad Left Analog Stick</kbd> or <kbd>Gamepad D-Pad</kbd>: Move
-- <kbd>Space</kbd>, <kbd>Gamepad A/Cross</kbd>: Jump
-- <kbd>Right Mouse Button</kbd>, <kbd>Gamepad Left Trigger (L2)</kbd> (press to toggle, or hold and release): Aim
-- <kbd>Left Mouse Button</kbd>, <kbd>Gamepad Right Trigger (R2)</kbd>: Shoot (only while aiming)
-- <kbd>Escape</kbd>, <kbd>Gamepad Start</kbd>: Go to main menu/quit
-- <kbd>F11</kbd> or <kbd>Alt + Enter</kbd>: Toggle fullscreen
-- <kbd>F3</kbd>: Toggle debugging information (such as FPS counter)
+| Action | Keyboard / mouse | Gamepad |
+|---|---|---|
+| Move | W A S D / Arrow keys | Left stick / D-pad |
+| Look | Mouse | Right stick |
+| Jump | Space | A / Cross |
+| Aim (tap = toggle, hold = hold) | Right mouse button | Left trigger (L2) |
+| Shoot (while aiming) | Left mouse button | Right trigger (R2) |
+| Back to menu | Escape | Start |
+| Toggle fullscreen | F11 / Alt+Enter | — |
+| Toggle debug overlay | F3 | — |
 
-## Useful links
+## Testing status (summary)
 
-- [Main website](https://godotengine.org)
-- [Source code](https://github.com/godotengine/godot)
-- [Documentation](http://docs.godotengine.org)
-- [Community hub](https://godotengine.org/community)
-- [Other demos](https://github.com/godotengine/godot-demo-projects)
+Full details, including what could **not** be tested: [`docs/TEST_REPORT.md`](docs/TEST_REPORT.md).
 
-## License
+| Area | Status |
+|---|---|
+| Headless import (Godot 4.7.2) | PASS |
+| Automated tests (25 checks: resources, input map, settings, gameplay smoke) | PASS (25/25) |
+| Menu, settings, online panel, loading screen: graphical, Forward+ (software Vulkan) | PASS |
+| Gameplay: graphical, Compatibility renderer (software OpenGL, ≈1 FPS) | PASS for movement, camera, aim, shoot, back to menu, quit |
+| Gameplay: graphical, Forward+ on software Vulkan | BLOCKED: level load freezes at 38 % on this GPU-less test machine (engine/driver-level, also happens on unmodified upstream) |
+| Real GPU, gamepad, Android | NOT TESTED (no hardware available) |
 
-See [LICENSE.md](LICENSE.md) for details.
+Run the tests yourself:
+
+```bash
+godot --headless --import --path .
+godot --headless --path . res://tests/test_runner.tscn   # exit code 0 = all passed
+```
+
+## Known limitations
+
+* The original "TPS Demo" title image, icon and boot splash remain (text-only rebrand).
+* SSAO *Medium* and *High* are internally swapped upstream; kept as-is to preserve default visuals.
+* `physics/3d/physics_engine="Bullet"` is a Godot 3 leftover that Godot 4 ignores; the
+  engine's default physics server is used. Left unchanged to avoid altering physics feel.
+* Asset import warnings inherited from upstream: `door.dae` references a missing
+  `doorsimple_d.png` (upstream issue #217) and a duplicate `Cannon_Charge` animation (#218).
+* Settings saved by the original demo are not migrated, because the user-data folder name changed with the title.
+* No pause menu, credits screen or Android/touch support. None of these exist upstream, and none were invented.
+
+## Credits & licence
+
+* **ROSHAN TPS rebrand, fixes, tests, docs:** Roshan
+* **Original game code:** Juan Linietsky and the Godot Engine contributors (MIT)
+* **3D assets & art:** Juan Linietsky, Fernando Miguel Calabró (CC BY 3.0); source materials from GameTextures.com
+* **Music:** Christian Fernando Perucchi (CC BY 3.0)
+* **Font:** PT Sans by ParaType Ltd. (SIL OFL 1.1)
+* **Engine:** [Godot Engine](https://godotengine.org) (MIT)
+
+See [`LICENSE.md`](LICENSE.md) (upstream, unchanged),
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and
+[`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+Upstream repository: <https://github.com/godotengine/tps-demo>. The original
+README is preserved at [`docs/UPSTREAM_README.md`](docs/UPSTREAM_README.md).
+
+Not affiliated with or endorsed by the Godot Foundation or the original authors.
