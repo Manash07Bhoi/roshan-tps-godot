@@ -1,0 +1,17 @@
+
+real	0m16.205s
+user	0m12.185s
+sys	0m7.087s
+CLONE_EXIT=0
+cloned HEAD: bff96c0a49c76e117e61d8e66fc8b6a00370f703 branch: main
+dirty files after clone: 0
+
+real	0m38.548s
+user	0m34.370s
+sys	0m5.344s
+IMPORT_EXIT=0
+TESTS_EXIT=0
+dirty files after import+tests: 0
+DONE
+TESTS_EXIT=124
+DONE
